@@ -75,7 +75,7 @@ def update():
 
 
 # This route is for deleting our employee
-@app.route('/delete/<id>')
+@app.route('/delete/<id>' methods=['GET'])
 def delete(id):
     my_data = Employee.query.get(id)
     db.session.delete(my_data)
